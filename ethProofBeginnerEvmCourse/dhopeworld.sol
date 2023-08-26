@@ -22,22 +22,22 @@ contract ApcToken {
              string public tokenAbbrv = 'DOP';
                    uint public totalSupply = 0;
 
-                                                      // mapping variable 
-                                               
-                                 mapping(address => uint) public balances;
 
-                                                               // mint DOP
-                                                          
-                     function mint(address _address, uint _amount) public {
-                                                    totalSupply += _amount;
-                                             balances[_address] += _amount;
+                  // mapping                            
+                  mapping(address => uint) public balances;
+
+
+                  // mint dhopeworld                                       
+                  function mint(address _address, uint _amount) public {
+                  totalSupply += _amount;
+                  balances[_address] += _amount;
     }
+ 
 
-                                                                // burn DOP
-                                                            
-                      function burn(address _address, uint _amount) public {
-      require(balances[_address] >= _amount, "UNSUPPORTED TRANSACTION");
-                                                      totalSupply -= _amount;
-                                               balances[_address] -= _amount;
+                  // burn dhopeworld                                       
+                  function burn(address _address, uint _amount) public {
+                  require(balances[_address] >= _amount, "BURNING ERROR");
+                  totalSupply -= _amount;
+                  balances[_address] -= _amount;
     }
 }
