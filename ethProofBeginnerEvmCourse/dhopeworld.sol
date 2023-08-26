@@ -18,8 +18,8 @@ pragma solidity 0.8.19;
 contract ApcToken {
                    // public variables here
                    
-    string public tokenName = 'dhopeworld';
-             string public tokenAbbrv = 'DOP';
+                   string public tokenName = 'dhopeworld';
+                   string public tokenAbbrv = 'DOP';
                    uint public totalSupply = 0;
 
 
