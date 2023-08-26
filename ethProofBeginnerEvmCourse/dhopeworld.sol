@@ -15,29 +15,29 @@ pragma solidity 0.8.19;
        to the amount that is supposed to be burned.
 */
 
-contract ApcToken {
-                   // public variables here
+contract DhopeWorld {
+                      // public variables here
                    
-                   string public tokenName = 'dhopeworld';
-                   string public tokenAbbrv = 'DOP';
-                   uint public totalSupply = 0;
+                       string public tokenName = 'dhopeworld';
+                       string public tokenAbbrv = 'DOP';
+                       uint public totalSupply = 0;
 
 
-                  // mapping                            
-                  mapping(address => uint) public balances;
+                      // mapping                            
+                      mapping(address => uint) public balances;
 
 
-                  // mint dhopeworld                                       
-                  function mint(address _address, uint _amount) public {
-                  totalSupply += _amount;
-                  balances[_address] += _amount;
+                      // mint dhopeworld                                       
+                      function mint(address _address, uint _amount) public {
+                      totalSupply += _amount;
+                      balances[_address] += _amount;
     }
  
 
-                  // burn dhopeworld                                       
-                  function burn(address _address, uint _amount) public {
-                  require(balances[_address] >= _amount, "BURNING ERROR");
-                  totalSupply -= _amount;
-                  balances[_address] -= _amount;
+                      // burn dhopeworld                                       
+                      function burn(address _address, uint _amount) public {
+                      require(balances[_address] >= _amount, "BURNING ERROR");
+                      totalSupply -= _amount;
+                      balances[_address] -= _amount;
     }
 }
